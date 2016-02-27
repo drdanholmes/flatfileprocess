@@ -5,7 +5,6 @@
 # Use at your own risk.
 ########################################################################################
 
-library(dplyr)
 library(tcltk2)
 
 #make a radiobutton widget
@@ -106,7 +105,7 @@ if (!problem){
   
   #separate out sample types
   standards <- grep("Blank|STD",quantifiers$sampleID)
-  qc <- grep("C-LY", quantifiers$sampleID)
+  qc <- grep("C-", quantifiers$sampleID)
   
   #create a regular expression to identify samples (E followed by 10 digits)
   regexp<-"(^E)([[:digit:]]{10})"
